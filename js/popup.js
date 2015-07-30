@@ -1,45 +1,34 @@
-   //flyFiStyle
-    $("#flyFiIcon").hover(function () {
-    $(".overlayFlyFi").fadeIn(500)
-    $("#smileyIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlayFlyFi").fadeOut(500).stop( true, true )
-    $("#smileyIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeIn(500).stop( true, true )
+$(document).ready(function(){
+    console.log("document ready::::");
+    // var $item = $('.icons');
+    mouseEnterHandler = function(event){
+        $(this).find('.overlay,.overlayLegal').fadeIn(500).show();
+        $('.icons').not(this).fadeOut(500).hide().stop(true, true);
+
+    };
+    mouseLeaveHandler = function(event){
+        $(this).find('.overlay,.overlayLegal').fadeOut(500).hide().stop(true, true);
+        $('.icons').not(this).fadeIn(500).show();
+    };
+        
+    $('body')
+        .delegate('.icons','mouseenter', mouseEnterHandler)
+        .delegate('.icons','mouseleave', mouseLeaveHandler);
+
+    // function() {
+    //     $(window).bind('scroll',function()
+    //     {
+    //         console.log('window bind scroll:::::');
+    //         if($(window).scrollTop() >= $('.layoutBodyNarrowAreaInnerFloatWrap').offset().top){
+    //             $('.container').fadeIn().show();
+    //             console.log('fade in container:::::');
+    //             //$('.itinerary-wrap.box').css({'margin-top':'fixed', 'left': floatingContentLeft.toString()+'px'});
+
+    //         } else {
+    //             $('.container').fadeOut().hide();
+    //             // $('.itinerary-wrap.box').removeAttr('style');
+    //             // $('.itinerary-wrap.box').css({'position':'absolute','top':'0px','right':'0px'});
+    //         }
+    //     });
+    // }
 });
-
-$("#smileyIcon").hover(function () {
-    $(".overlaySmiley").fadeIn(500)
-    $("#flyFiIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlaySmiley").fadeOut(500).stop( true, true )
-    $("#flyFiIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeIn(500).fadeIn(500).stop( true, true )
-});
-
-$("#legRoomIcon").hover(function () {
-    $(".overlayLegRoom").fadeIn(500)
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlayLegRoom").stop( true, true ).fadeOut(500)
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#awardIcon").fadeIn(500).stop( true, true )
-});
-
-
-$("#snacksIcon").hover(function () {
-    $(".overlaySnacks").fadeIn(500)
-    $("#flyFiIcon,#smileyIcon,#legRoomIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlaySnacks").stop( true, true ).fadeOut(500)
-    $("#flyFiIcon,#smileyIcon,#legRoomIcon,#awardIcon").fadeIn(500).stop( true, true )
-});
-
-
-$("#awardIcon").hover(function () {
-    $(".overlayAward").fadeIn(500).css({
-        "display": "block"
-    });
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#legRoomIcon").fadeOut(500)
-}, function () {
-    $(".overlayAward").stop( true, true ).fadeOut(500)
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#legRoomIcon").fadeIn(500).stop( true, true )
-});
-

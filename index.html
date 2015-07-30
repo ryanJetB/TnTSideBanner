@@ -1,112 +1,52 @@
 <html>
 	<head>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="/js/jquery.min.js" type="text/javascript"></script>
 
-		<link rel="stylesheet" href="/src/style.css">
+		<link rel="stylesheet" href="/src/smallbanner.css">
 	
-		<script type="text/javascript" src="/js/popup.js"></script>
+		<script type="text/javascript" src="/js/smallbanner.js"></script>
+
 
 	
 
 
 	</head>
-	<body>
-	
-		<div class="container">
-		<!-- 	<div class="overlayFlyFi"><p>Available on Most Aircraft, with more installations underway.</p></div>
-			<div class="overlaySmiley"><p><strong>DIRECTTV</strong> and <strong>SiriusXM</strong> service is not available on flights outside the continental U.S.</p></div>
-			<div class="overlayLegRoom"><p>Based on average fleet-wide seat pitch of U.S. airlines</p></div>
-			<div class="overlaySnacks"><p>Please take all you can within reason!</p></div>
-			<div class="overlayAward"><p>Please take all you can within reason!</p></div> -->
-			
-			<div class="headerTitle">
-				<p class="headerText">The JetBlue Experience.</p>
-			</div>
-				<div id="icons">
-
-					<div class="overlayFlyFi"><p>Available on Most Aircraft, with more installations underway.</p></div>
-					<div id="flyFiIcon">
-					<a href="http://www.jetblue.com/flying-on-jetblue/wifi/" target="blank"></a>
-					</div>
-			
-
-					<div class="overlaySmiley"><p><strong>DIRECTTV</strong> and <strong>SiriusXM</strong> service is not available on flights outside the continental U.S.</p></div>
-					<div id="smileyIcon" class="smiley">
-						<a href="http://www.jetblue.com/flying-on-jetblue/directv/" target="blank"></a>
-					</div>
-					
-
-					<div class="overlayLegRoom"><p>Based on average fleet-wide seat pitch of U.S. airlines</p></div>
-					<div id="legRoomIcon" class="legRoom">
-						<a href="https://www.jetblue.com/flying-on-jetblue/even-more/" target="blank"></a>
-					</div>
-
-					
-					<div class="overlaySnacks"><p>Please take all you can within reason!</p></div>
-					<div id="snacksIcon" class="snacksIcon">
-						<a href="http://www.jetblue.com/flying-on-jetblue/snacks-and-drinks/" target="blank"></a>
-					</div>
-
-
-					<div class="overlayAward"><p>Please take all you can within reason!</p></div>
-					<div id="awardIcon" class="award">
-						<a href="https://www.jetblue.com/flying-on-jetblue/customer-protection/" target="blank"></a>
-					</div>
-
-					
-				</div>
-			
-		</div>
-		
-	</body>
+<body>
+    <div class="containerSmallBanner">
+        <div class="headerTitle">
+            <p class="headerText">The JetBlue Experience</p>
+        </div>
+        <div id="icons">
+            <div id="flyFiIcon" class='icons'>
+                <div id="overlayflyFiIcon" class='overlay'>
+                    <p class="iconTitle">Free Fly-Fi***</p>
+                </div>
+                <p id="flyFiLegal" class="overlayLegal">***Available on Most Aircraft, with more installations underway.</p>
+            </div>
+            <div id="smileyIcon" class='icons'>
+                <div id="overlaysmileyIcon" class='overlay'>
+                    <p class="iconTitle" style="text-align: center;">Free DIRECTTV & SiriusXM at every seat**</p>
+                </div>
+                <p id="smileyLegal" class="overlayLegal">	<strong>**DIRECTTV</strong> and <strong>SiriusXM</strong> service is not available on flights outside the continental U.S.</p>
+            </div>
+            <div id="legRoomIcon" class='icons'>
+                <div id="overlaylegRoomIcon" class='overlay'>
+                    <p class="iconTitle">Most legroom in coach*</p>
+                </div>
+                <p id="legRoomLegal" class="overlayLegal">*Based on average fleet-wide seat pitch of U.S. airlines</p>
+            </div>
+            <div id="snacksIcon" class='icons'>
+                <div id="overlaysnacksIcon" class='overlay'>
+                    <p class="iconTitle">Free snacks & drinks</p>
+                </div>
+            </div>
+            <div id="awardIcon" class='icons'>
+                <div id="overlayawardIcon" class='overlay'>
+                    <p class="iconTitle">Award-winning service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
-<script type="text/javascript">
-	   //flyFiStyle
-    $("#flyFiIcon").hover(function () {
-    $(".overlayFlyFi").fadeIn(500)
-    $("#smileyIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlayFlyFi").fadeOut(500).stop( true, true )
-    $("#smileyIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeIn(500).stop( true, true )
-});
-
-$("#smileyIcon").hover(function () {
-    $(".overlaySmiley").fadeIn(500)
-    $("#flyFiIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlaySmiley").fadeOut(500).stop( true, true )
-    $("#flyFiIcon,#legRoomIcon,#snacksIcon,#awardIcon").fadeIn(500).fadeIn(500).stop( true, true )
-});
-
-$("#legRoomIcon").hover(function () {
-    $(".overlayLegRoom").fadeIn(500)
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlayLegRoom").stop( true, true ).fadeOut(500)
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#awardIcon").fadeIn(500).stop( true, true )
-});
-
-
-$("#snacksIcon").hover(function () {
-    $(".overlaySnacks").fadeIn(500)
-    $("#flyFiIcon,#smileyIcon,#legRoomIcon,#awardIcon").fadeOut(500)
-}, function () {
-    $(".overlaySnacks").stop( true, true ).fadeOut(500)
-    $("#flyFiIcon,#smileyIcon,#legRoomIcon,#awardIcon").fadeIn(500).stop( true, true )
-});
-
-
-$("#awardIcon").hover(function () {
-    $(".overlayAward").fadeIn(500).css({
-        "display": "block"
-    });
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#legRoomIcon").fadeOut(500)
-}, function () {
-    $(".overlayAward").stop( true, true ).fadeOut(500)
-    $("#flyFiIcon,#smileyIcon,#snacksIcon,#legRoomIcon").fadeIn(500).stop( true, true )
-});
-
-
-</script>
-
