@@ -1,156 +1,194 @@
 /*Container holding the icons and overlay*/
-.container{
-    width:216px !important;
+.containerSmallBanner{
+    width:216px;
     height:250px;
-background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/background.png");
+    background:url("//localhost:8888/assets/background.png");
     position:relative;
+    margin-bottom:10px;
+    border-radius: 3px; 
 }
 
 /*Header text for section*/
 .headerTitle .headerText{
     font-family: din-web-jetblue, Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size:16px;
+    font-weight: 600;
+    font-size:18px;
     color:white;
     padding-top:10px;
-    margin: 0px 5px 10px 10px;
+    margin: 0px 5px;
+    white-space:nowrap;
+    overflow:hidden;
 }
-
-p{
-    font-size:14px;
+p.overlayLegal {
+    font-size:10px;
+    color: white;
+    font-family:din-web-jetblue, Arial, Helvetica, sans-serif;
+    font-style: italic;
+    position:relative;
+    width:200px;
+}
+.iconTitle {
+    font-size:16px;
     color: white;
     font-family:din-web-jetblue, Arial, Helvetica, sans-serif;
 }
+
 /*Icons Normal/onHover states*/
 #flyFiIcon{
-    width:80px;
-    height:80px;
+    width:60px;
+    height:60px;
     top: 30px;
-    margin-left:10px;
+    left:20px;
     display:block;
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/freeflyicon.png") no-repeat;
-    background-size: 90px;
+    background:url("//localhost:8888/assets/freeflyicon.png") no-repeat;
+    background-size: 60px;
 }
 #flyFiIcon:hover{
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/freeflyicon_hover.png") no-repeat;
-    background-size: 90px;
+    background:url("//localhost:8888/assets/freeflyicon_hover.png") no-repeat;
+    background-size: 60px;
 }
 #snacksIcon{
-    width:80px;
-    height:80px;
-    top: 25px;
-    margin-left:116px;
+    width:60px;
+    height:60px;
+    top: 30px;
+    right:20px;
     display:block;
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/snacksIcon.png") no-repeat;
-    background-size: 90px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freesnacksicon.png") no-repeat;
+    background-size: 60px;
 }
 #snacksIcon:hover{
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/freesnacksicon_hover.png") no-repeat;
-    background-size: 90px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freesnacksicon_hover.png") no-repeat;
+    background-size: 60px;
 }
 #smileyIcon{
-    width:75px;
-    height:75px;
+    width:60px;
+    height:60px;
     top: 95px;
-    margin-left:63px;
+    left:78px;
     display:block;
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/smileyicon.png") no-repeat;
-    background-size: 90px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/smileyicon.png") no-repeat;
+    background-size: 60px;
 }
 #smileyIcon:hover{
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/smileyicon_hover.png")no-repeat;
-    background-size: 90px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/smileyicon_hover.png")no-repeat;
+    background-size: 60px;
 }
 #legRoomIcon{
-    width:85px;
-    height:85px;
-    top: 150px;
-    margin-left:10px;
+    width:60px;
+    height:60px;
+    bottom: 30px;
+    left:20px;
     display:block;
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/legroomicon.png")no-repeat;
-    background-size: 85px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/legroomicon.png")no-repeat;
+    background-size: 60px;
 }
 #legRoomIcon:hover{
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/legroomicon_hover.png")no-repeat;
-    background-size: 90px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/legroomicon_hover.png")no-repeat;
+    background-size: 60px;
 }
 #awardIcon{
-    width:80px;
-    height:80px;
-    top: 150px;
-    margin-left:116px;
-    margin-left:116px;
+    width:60px;
+    height:60px;
+    bottom: 30px;
+    right:20px;
     display:block;
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/awardicon.png")no-repeat;
-    background-size: 90px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/awardicon.png")no-repeat;
+    background-size: 60px;
 }
 #awardIcon:hover{
     position:absolute;
-    background:url("//www.jetblue.com/img/ABTests/ryan/smallbanner/assets/awardicon_hover.png")no-repeat;
-    background-size: 90px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/awardicon_hover.png")no-repeat;
+    background-size: 60px;
 }
+
+
+
+
+
+
 
 
 /*overlay text position*/
-.overlayFlyFi {
+#overlayFlyFi {
     display:none;
-    margin:10px;
-    top:80px;
-    width:200px;
+    left:70px;
+    top:10px;
+    width:130px;
     height: auto;
  /* font-family: din-web-jetblue, Arial, Helvetica, sans-serif;*/
     color:white;
-    position:absolute;
+    position:relative;
 }
-.overlaySmiley {
+#overlaySnacks {
     display:none;
-    margin:10px;
-    top:20px;
-    width:200px;
-    height: auto;
-   /* font-family: din-web-jetblue, Arial, Helvetica, sans-serif;*/
-    color:white;
-    position:absolute;
-    font-size:14px;
-}
-    
-.overlayLegRoom {
-    display:none;
-    margin:10px;
-    top:100px;
-    width:200px;
-    height: auto;
-   /* font-family: din-web-jetblue, Arial, Helvetica, sans-serif;*/
-    color:white;
-    position:absolute;
-}
-.overlaySnacks {
-    display:none;
-    margin:10px;
-    top:70px;
-    width:200px;
+    top:10px;
+    right:120px;
+    width:115px;
     height: auto;
     /*font-family: din-web-jetblue, Arial, Helvetica, sans-serif;*/
     color:white;
-    position:absolute;
+    position:relative;
 }
 
-.overlayAward {
+#overlaySmiley {
     display:none;
-    margin:10px;
-    top:100px;
+    left: -68px;
+    top:-60px;
     width:200px;
     height: auto;
    /* font-family: din-web-jetblue, Arial, Helvetica, sans-serif;*/
     color:white;
-    position:absolute;
+    position:relative;
+    font-size:14px;
+}
+    
+
+
+#overlayLegRoom {
+    display:none;
+    bottom:10px;
+    left:80px;
+    width:105px;
+    height: auto;
+   /* font-family: din-web-jetblue, Arial, Helvetica, sans-serif;*/
+    color:white;
+    position:relative;
+    text-align: bottom;
+}
+#overlayAward {
+    display:none;
+    bottom:10px;
+    right:120px;
+    width:120px;
+    height: auto;
+   /* font-family: din-web-jetblue, Arial, Helvetica, sans-serif;*/
+    color:white;
+    position:relative;
+}
+.overlay{
+    display:none;
+}
+.overlayLegal{
+    display:none;
+}
+#flyFiLegal{
+    top: 140px;
+    left: -10px;
+}
+#smileyLegal{
+   top: 40px;
+   left: -70px;
+}
+#legRoomLegal{
+    top:-10px;
+    left: -10px;
 }
