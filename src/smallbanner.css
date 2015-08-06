@@ -1,13 +1,22 @@
+/*banner image at top*/
+.bannerImage{
+    padding:20px 0px;
+    background-color: white;
+}
+
+sup{
+    font-size: 11px;
+}
 /*Container holding the icons and overlay*/
 .containerSmallBanner{
-    width:216px;
+    width:216px;  
     height:250px;
-    background:url("//localhost:8888/assets/background.png");
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/background.png");
     background-size:216px;
     position:relative;
     margin-bottom:10px;
     border-radius: 3px; 
- /*   display:none;*/
+    display:none;
 }
 
 /*Header text for section*/
@@ -20,6 +29,7 @@
     margin: 0px 5px;
     white-space:nowrap;
     overflow:hidden;
+/*    display:none;*/
 }
 p.overlayLegal {
     font-size:10px;
@@ -28,10 +38,13 @@ p.overlayLegal {
     position:relative;
     width:200px;
 }
+/*#icons{
+    height:0px;
+}*/
 .iconTitle {
     top:62px;
     left:-75px;
-    width:216px;
+    width:210px;
     text-align:center;
     font-size:18px;
     color: white;
@@ -40,27 +53,28 @@ p.overlayLegal {
 }
 
 /*Icons Normal/onHover states*/
-#flyFiIcon{
+#legRoomIcon{
     width:60px;
     height:60px;
-    top: 30px;
+    top: 40px;
     left:20px;
     display:block;
     position:absolute;
-    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freeflyicon.png") no-repeat;
-    background-size: 60px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/legRoomicon.png") no-repeat;
+    background-size:55px;
 }
-#flyFiIcon:hover{
+#legRoomIcon:hover{
     position:absolute;
-    background:url("") no-repeat;
-    background-size: 60px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/legRoomicon_opaque.png") no-repeat;
+    background-size:55px;
+    
 }
 
 #snacksIcon{
     width:60px;
     height:60px;
-    top: 30px;
-    right:20px;
+    top: 170px;
+    left:20px;
     display:block;
     position:absolute;
     background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freesnacksicon.png") no-repeat;
@@ -68,15 +82,16 @@ p.overlayLegal {
 }
 #snacksIcon:hover{
     position:absolute;
-    background:url("")no-repeat;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freesnacksicon_opaque.png")no-repeat;
     background-size: 60px;
+
 }
 
 
 #smileyIcon{
     width:60px;
     height:60px;
-    top: 95px;
+    top: 105px;
     left:78px;
     display:block;
     position:absolute;
@@ -85,30 +100,31 @@ p.overlayLegal {
 }
 #smileyIcon:hover{
     position:absolute;
-    background:url("")no-repeat;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/smileyicon_opaque.png")no-repeat;
     background-size: 60px;
 }
 
-#legRoomIcon{
-    width:60px;
-    height:60px;
-    bottom: 30px;
-    left:20px;
+#flyFiIcon{
+    width:65px;
+    height:65px;
+    top: 33px;
+    right:20px;
     display:block;
     position:absolute;
-    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/legroomicon.png")no-repeat;
-    background-size: 60px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freeflyicon.png")no-repeat;
+    background-size: 65px;
 }
-#legRoomIcon:hover{
+#flyFiIcon:hover{
     position:absolute;
-    background:url("")no-repeat;
-    background-size: 60px;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freeflyicon_opaque.png")no-repeat;
+    background-size: 65px;
+    
 }
 
 #awardIcon{
     width:60px;
     height:60px;
-    bottom: 30px;
+    top: 170px;
     right:20px;
     display:block;
     position:absolute;
@@ -116,51 +132,55 @@ p.overlayLegal {
     background-size: 60px;
 }
 #awardIcon:hover{
-    background:url("")no-repeat;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/awardicon_opaque.png")no-repeat;
     background-size: 60px;
 }
 
 
-#overlayflyFiIcon {
+#overlaylegRoomIcon {
     position:absolute;
-    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freeflyicon_hover.png")no-repeat;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/legroomicon_hover.png")no-repeat;
     background-size: 60px;
     display:none;
     left:58px;
-    top:60px;
+    top:50px;
     width:60px;
     height: 60px;
     color:white;
+   
 }
 #overlaysnacksIcon {
     display:none;
     position:absolute;
     background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freesnacksicon_hover.png")no-repeat;
-    background-size: 60px;
-    left:-60px;
-    top:60px;
-    height:60px;
-    color:white;
-}
-#overlaysmileyIcon {
-    display:none;
-    position:absolute;   
-    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/smileyicon_hover.png")no-repeat;
-    background-size: 60px; 
-     height: 60px;
-    color:white;
-}
-#overlaylegRoomIcon {
-    display:none;
-    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/legroomicon_hover.png")no-repeat;
-    background-size: 60px;
-    bottom:62px;
+     background-size: 60px;
+    bottom:82px;
     left:53px;
     width:60px;
     height:60px;
     color:white;
     position:absolute;
-    text-align: center;
+    }
+#overlaysmileyIcon {
+    display:none;
+    position:absolute;   
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/smileyicon_hover.png")no-repeat;
+    background-size: 60px; 
+    height: 60px;
+    width:60px;
+    color:white;
+}
+#overlayflyFiIcon {
+    display:none;
+    background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/freeflyicon_hover.png")no-repeat;
+    text-align: center; background-size: 60px;
+    left:-55px;
+    top:50px;
+    height:55px;
+    width:55px;
+    color:white;
+    position: absolute;
+    
 }
 #overlayawardIcon {
     display:none;
@@ -168,7 +188,7 @@ p.overlayLegal {
     background:url("//www.jetblue.com/img/abtests/ryan/smallbanner/assets/awardIcon_hover.png") no-repeat;
     background-size: 60px;
     left:-58px;
-    bottom:65px;
+    bottom:85px;
     width:60px;
     height: 60px;
     color:white;
@@ -179,15 +199,15 @@ p.overlayLegal {
 .overlayLegal{
     display:none;
 }
-#flyFiLegal{
-    top: 190px;
+#legRoomLegal{
+    top: 180px;
     left: -10px;
 }
 #smileyLegal{
-   top: 125px;
+   top: 115px;
    left: -70px;
 }
-#legRoomLegal{
-    top:63px;
-    left: -10px;
+#flyFiLegal {
+    top: 188px;
+    left: -124px;
 }

@@ -1,0 +1,71 @@
+$(document).ready(function () {
+    mouseEnterHandler = function (event) {
+        var findOverlay = "#overlay" + this.id;
+        if (findOverlay == "#overlayflyFiIcon"){
+            console.log(findOverlay);
+            $(this).find(findOverlay).animate({left: '+=60',top: '+=60'
+            }, 1000).fadeIn(500).show();
+            $(this).find('.overlayLegal').fadeIn(500).show();
+            $('.icons').not(this).fadeOut(500).hide().stop(true, true);
+        
+        }else if(findOverlay == "#overlaysnacksIcon"){
+            $(this).find(findOverlay).animate({left: '-=60',top: '+=60'
+            }, 1000).fadeIn(500).show();
+            $(this).find('.overlayLegal').fadeIn(500).show();
+            $('.icons').not(this).fadeOut(500).hide().stop(true, true);
+        
+        }else if (findOverlay == "#overlaysmileyIcon"){
+            $(this).find(findOverlay).fadeIn(500).show();
+            $(this).find('.overlayLegal').fadeIn(500).show();
+            $('.icons').not(this).fadeOut(500).hide().stop(true, true);
+       
+        }else if  (findOverlay == "#overlaylegRoomIcon"){
+            $(this).find(findOverlay).animate({left: '+=53',bottom: '+=62'
+            }, 1000).fadeIn(500).show();
+            $(this).find('.overlayLegal').fadeIn(500).show();
+            $('.icons').not(this).fadeOut(500).hide().stop(true, true);
+        
+        }else if  (findOverlay == "#overlayawardIcon"){
+            $(this).find(findOverlay).animate({left: '-=58',bottom: '+=65'
+            }, 1000).fadeIn(500).show();
+            $(this).find('.overlayLegal').fadeIn(500).show();
+            $('.icons').not(this).fadeOut(500).hide().stop(true, true);
+        }
+    
+    };
+    mouseLeaveHandler = function (event) {
+        var findOverlay = "#overlay" + this.id;
+        if (findOverlay == "#overlayflyFiIcon"){
+            $(this).find(findOverlay).animate({left: '-=60',top: '-=60'
+            }, 1000).fadeOut(500).hide().stop(true, true);
+            $(this).find('.overlayLegal').fadeOut(500).hide().stop(true, true);
+            $('.icons').not(this).fadeIn(500).show();
+        } else if(findOverlay == "#overlaysnacksIcon"){
+            $(this).find(findOverlay).animate({left: '+=60',top: '-=60'
+            }, 1000).fadeOut(500).hide().stop(true, true);
+            $(this).find('.overlayLegal').fadeOut(500).hide().stop(true, true);
+            $('.icons').not(this).fadeIn(500).show();
+        } else if(findOverlay == "#overlaysmileyIcon"){
+            $(this).find(findOverlay).fadeOut(500).hide().stop(true, true);
+            $(this).find('.overlayLegal').fadeOut(500).hide().stop(true, true);
+            $('.icons').not(this).fadeIn(500).show();
+        }else if(findOverlay == "#overlaylegRoomIcon"){
+            $(this).find(findOverlay).animate({left: '-=53',top: '-=65'
+            }, 1000).fadeOut(500).hide().stop(true, true);
+            $(this).find('.overlayLegal').fadeOut(500).hide().stop(true, true);
+            $('.icons').not(this).fadeIn(500).show();
+        }else if(findOverlay == "#overlayawardIcon"){
+            $(this).find(findOverlay).animate({left: '+=58',top: '-=65'
+            }, 1000).fadeOut(500).hide().stop(true, true);
+            $(this).find('.overlayLegal').fadeOut(500).hide().stop(true, true);
+            $('.icons').not(this).fadeIn(500).show();
+        }
+    };
+
+    $('body')
+        .delegate('.icons', 'mouseenter', mouseEnterHandler)
+        .delegate('.icons', 'mouseleave', mouseLeaveHandler);
+
+});
+
+$("#div").animate({left: '+=50', top: '+=50'}, 1000);

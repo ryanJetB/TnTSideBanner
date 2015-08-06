@@ -1,0 +1,199 @@
+/*Container holding the icons and overlay*/
+.containerSmallBanner{
+    width:216px;
+    height:250px;
+    background:url("//www-dev.jetblue.com/img/abtests/ryan/smallbanner/assets/background.png");
+    background-size:216px;
+    position:relative;
+    margin-bottom:10px;
+    border-radius: 3px; 
+    /* display:none; */
+}
+
+/*Header text for section*/
+.headerTitle .headerText{
+    font-family: din-web-jetblue, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size:20px;
+    color:white;
+    padding-top:10px;
+    margin: 0px 5px;
+    white-space:nowrap;
+    overflow:hidden;
+}
+p.overlayLegal {
+    font-size:10px;
+    color: white;
+    font-family:din-web-jetblue, Arial, Helvetica, sans-serif;
+    position:relative;
+    width:200px;
+}
+.iconTitle {
+    top:62px;
+    left:-75px;
+    width:216px;
+    text-align:center;
+    font-size:18px;
+    color: white;
+    position: relative;
+    font-family:din-web-jetblue, Arial, Helvetica, sans-serif;
+}
+
+/*Icons Normal/onHover states*/
+#flyFiIcon{
+    width:60px;
+    height:60px;
+    top: 30px;
+    left:20px;
+    display:block;
+    position:absolute;
+    background:url("//localhost:8888/assets/freeflyicon.png") no-repeat;
+    background-size: 60px;
+}
+#flyFiIcon:hover{
+    position:absolute;
+    background:url("//localhost:8888/assets/freeflyicon_opaque.png") no-repeat;
+    background-size: 60px;
+    opacity:0.3;
+}
+
+#snacksIcon{
+    width:60px;
+    height:60px;
+    top: 30px;
+    right:20px;
+    display:block;
+    position:absolute;
+    background:url("//localhost:8888/assets/freesnacksicon.png") no-repeat;
+    background-size: 60px;
+}
+#snacksIcon:hover{
+    position:absolute;
+    background:url("//localhost:8888/assets/freesnacksicon_opaque.png")no-repeat;
+    background-size: 60px;
+    opacity:0.3;
+}
+
+
+#smileyIcon{
+    width:60px;
+    height:60px;
+    top: 95px;
+    left:78px;
+    display:block;
+    position:absolute;
+    background:url("//localhost:8888/assets/smileyicon.png") no-repeat;
+    background-size: 60px;
+}
+#smileyIcon:hover{
+    position:absolute;
+    background:url("")no-repeat;
+    background-size: 60px;
+}
+
+#legRoomIcon{
+    width:60px;
+    height:60px;
+    bottom: 30px;
+    left:20px;
+    display:block;
+    position:absolute;
+    background:url("//localhost:8888/assets/legroomicon.png")no-repeat;
+    background-size: 60px;
+}
+#legRoomIcon:hover{
+    position:absolute;
+    background:url("//localhost:8888/assets/legroomicon_opaque.png")no-repeat;
+    background-size: 60px;
+    opacity: 0.4;
+}
+
+#awardIcon{
+    width:60px;
+    height:60px;
+    bottom: 30px;
+    right:20px;
+    display:block;
+    position:absolute;
+    background:url("//localhost:8888/assets/awardicon.png")no-repeat;
+    background-size: 60px;
+}
+#awardIcon:hover{
+    background:url("//localhost:8888/assets/awardicon_opaque.png")no-repeat;
+    background-size: 60px;
+}
+
+
+#overlayflyFiIcon {
+    position:absolute;
+    background:url("//localhost:8888/assets/freeflyicon_hover.png")no-repeat;
+    background-size: 60px;
+    display:block;
+    left:58px;
+    top:60px;
+    width:60px;
+    height: 60px;
+    color:white;
+   
+}
+#overlaysnacksIcon {
+    display:none;
+    position:absolute;
+    background:url("//localhost:8888/assets/freesnacksicon_hover.png")no-repeat;
+    background-size: 60px;
+    left:-60px;
+    top:60px;
+    height:60px;
+    color:white;
+    opacity: 1;
+}
+#overlaysmileyIcon {
+    display:none;
+    position:absolute;   
+    background:url("//localhost:8888/assets/smileyicon_hover.png")no-repeat;
+    background-size: 60px; 
+     height: 60px;
+     width:60px;
+    color:white;
+}
+#overlaylegRoomIcon {
+    display:none;
+    background:url("//localhost:8888/assets/legroomicon_hover.png")no-repeat;
+    background-size: 60px;
+    bottom:62px;
+    left:53px;
+    width:60px;
+    height:60px;
+    color:white;
+    position:absolute;
+    text-align: center;
+}
+#overlayawardIcon {
+    display:none;
+    position:absolute;
+    background:url("//localhost:8888/assets/awardIcon_hover.png") no-repeat;
+    background-size: 60px;
+    left:-58px;
+    bottom:65px;
+    width:60px;
+    height: 60px;
+    color:white;
+}
+.overlay{
+    display:none;
+}
+.overlayLegal{
+    display:none;
+}
+#flyFiLegal{
+    top: 190px;
+    left: -10px;
+}
+#smileyLegal{
+   top: 125px;
+   left: -70px;
+}
+#legRoomLegal{
+    top:63px;
+    left: -10px;
+}
