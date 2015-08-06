@@ -16,5 +16,4 @@ $(document).ready(function () {
     $('body')
         .delegate('.icons', 'mouseenter', mouseEnterHandler)
         .delegate('.icons', 'mouseleave', mouseLeaveHandler);
-
 });
