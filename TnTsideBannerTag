@@ -1,0 +1,138 @@
+<div class="smallBanner">
+    <script type="text/javascript">
+            ;
+            (function(jbABTest) {
+                if (!((brightTagPageData.DelayAnalyticsCall !== undefined) && (brightTagPageData.PageName == 'JetBlue|Flight Selection') && (window.innerWidth >= 1180))) {
+                    return;
+                }
+                var campaign = new jbABTest.campaign({
+                    className: 'smallBanner',
+                    // target: '#idLayoutBodyNarrowAreaInnerFloatWrap',
+                    loadAssets: {
+                        js: [
+                            '//www.jetblue.com/img/abtests/ryan/smallbanner/js/smallbanner.js'
+                        ],
+                        css: [
+                            '//www.jetblue.com/img/ABTests/ryan/smallbanner/css/smallbanner.css'
+                        ]
+                    }
+                });
+        
+                var callbacks = [];
+                campaign.onFallback(function() {
+                    var createdElements = document.querySelectorAll('.smallBanner');
+                    Array.prototype.forEach.call(createdElements, function(element) {
+                        element.parentElement.removeChild(element);
+                    });
+                });
+            
+                new campaign.experience({name:'Control Banner',split: 0.95,}); //Control
+                //Only 1 experience
+         
+                new campaign.experience({name:'See What We Do',split: 0.05},function()
+                {
+                    var htmlTemplate = document.createElement('div');
+                
+                    var callbacks = [];
+                    //Fetch template. Use xhr because jQuery doesn't exist
+                    var request = new XMLHttpRequest();
+                    request.onreadystatechange = function() {
+                        if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+                            htmlTemplate.innerHTML = request.responseText.replace(/\n|\r|\t/g, '');
+                            // done();
+                        }
+                    };
+                    request.open('GET', '//www.jetblue.com/img/abtests/ryan/smallbanner/index.asp', true);
+                    request.send();
+                    function done() {
+                        callbacks.forEach(function(callback) {
+                            callback();
+                        });
+                    }
+                            //Delay SERVE w/ onDeploy thenable
+                    campaign.onDeploy(function() {
+                            //Mock then-able
+                        return {
+                            then: function(callback) {
+                                if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+                                    setTimeout(callback, 1);
+                                } else {
+                                    callbacks.push(callback);
+                                }
+                            }
+                        };
+                    });
+                    (function image()
+                    {
+                        //dynamically add an image and set its attribute
+                        var bannerImage=document.createElement("img");
+                        bannerImage.src="//www.jetblue.com/img/ABTests/ryan/281banner_old.jpg";
+                       
+                        
+                        setTimeout(function()
+                        {
+                            console.log("jQuery defined ::::: ", jQuery);
+                            jQuery(bannerImage).attr('class','bannerImage');
+                            
+                            jQuery(bannerImage).insertAfter(jQuery("#pgFlightSelection .stepsNavAreaOuter"));
+                            jQuery('#idLayoutBodyNarrowAreaInnerFloatWrap').css({'margin-top':'365px'});
+                            //small banner code begins
+                            jQuery("#idLayoutBodyNarrowAreaInnerFloatWrap").prepend(htmlTemplate);
+                            var alreadyFired = false;
+                            if(jQuery('.smallBanner').length > 0){
+                                jQuery('#icons').hide();
+                                jQuery(window).bind('scroll',function()
+                                {
+                                    if(jQuery(window).scrollTop() >= jQuery('.layoutBodyNarrowAreaInnerFloatWrap').offset().top ){
+                                        if(jQuery('.containerSmallBanner').css('display') == 'none'){
+                                            jQuery('#idLayoutBodyNarrowAreaInnerFloatWrap').css({'position':'fixed', 'margin-top': '575px'});
+                                            jQuery('.containerSmallBanner').stop(true, true).slideDown(500).animate({ height: "250px" });
+                                            jQuery('#icons').stop(true, true).show(500);
+                                            (function (){
+                                                    jQuery('.containerSmallBanner #icons').hover(function() {
+                                                        if (alreadyFired == false){
+                                                            //console.log('outbound clicked ::::: ');
+                                                            triggerSTLCall('eVar46');
+                                                            function triggerSTLCall(evar){
+                                                                console.log('triggeredSTL' + evar);
+                                                                s.linkTrackVars = s.linkTrackVars || '';
+                                                                
+                                                                var linkTrackEvents = s.linkTrackEvents;
+                                                                var linkTrackVars = s.linkTrackVars;
+                                                                s.linkTrackVars = 'eVar46';
+                                                            
+                                                                s.eVar46 = 'Hovered Over Icon';
+                                                                s.tl(true, 'o', 'Hover over Icon');
+                                                                alreadyFired = true;
+                                                            };
+                                                        };
+                                                    });
+                                        
+                                            })();
+                                            jQuery('#idLayoutBodyNarrowAreaInnerFloatWrap').css({'margin-top': '575px'});
+                                        }
+                                        if(jQuery('.layoutBodyNarrowAreaBottom').length == 0){
+                                            jQuery('#idLayoutBodyNarrowAreaInnerFloatWrap').css({'position':'fixed'});
+                                        }
+                                    }else {
+                                        console.log('inside else');
+                                        if (jQuery('.containerSmallBanner').css('display') == 'block' && jQuery('.layoutBodyNarrowAreaFixed').length == 0 && jQuery('.layoutBodyNarrowAreaBottom').length == 0){
+                                            jQuery('#icons').hide(500);
+                                            jQuery('.containerSmallBanner').slideUp(500);
+                                            console.log('Before length :::: ',jQuery('.layoutBodyNarrowAreaBottom').length);
+                                            jQuery('#idLayoutBodyNarrowAreaInnerFloatWrap').removeAttr('style').css({'margin-top': '365px'});
+                                        }
+                                        if(jQuery('.layoutBodyNarrowAreaBottom').length != 0){
+                                            jQuery('#idLayoutBodyNarrowAreaInnerFloatWrap').css({'margin-top': '0px', 'position':'relative'});
+                                        }
+                                    }
+                                    
+                                });
+                            }
+                        },1);
+                                })();
+                });
+                campaign.serve();
+            })(jbABTest);
+    </script>
+</div>
